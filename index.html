@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Reverte</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Chatbot Reverte</h1>
+
+    <form action="/reverte" method="post">
+        <textarea name="text" rows="4" cols="50"></textarea>
+        <input type="submit" value="Generar versión Reverte">
+    </form>
+
+    <div class="result">
+        {% if generated_text %}
+        <h3>Versión Reverte:</h3>
+        <p>{{ generated_text }}</p>
+        {% endif %}
+    </div>
+
+    <div class="input">
+        {% if input_text %}
+        <h3>Texto ingresado:</h3>
+        <p>{{ input_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
